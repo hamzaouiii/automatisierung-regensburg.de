@@ -1,0 +1,14 @@
+
+
+.single-pricing ul li {
+  list-style: none;
+  margin: 8px 0;
+  text-align: left;
+}
+.single-pricing ul li i {
+  color: #007bff; /* deine Akzentfarbe */
+  margin-right: 8px;
+}
+.email-text p{
+  font-size: 0.8rem !important;
+}
