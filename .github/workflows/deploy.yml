@@ -1,4 +1,4 @@
-name: Deploy to Hetzner (FTPS)
+name: Deploy to Hetzner (Explicit FTPS)
 
 on:
   push:
@@ -9,23 +9,24 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Upload via FTPS
+      - name: Upload via Explicit FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          server: ${{ secrets.FTP_SERVER }}      # deploy.automatisierung-regensburg.de (DNS only)
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
+          protocol: ftps                          # explicit FTPS (AUTH TLS) on port 21
+          port: 21
           server-dir: ${{ secrets.FTP_REMOTE_DIR }}
-          local-dir: ./          # deploy the repo root
-          exclude: |             # keep things tidy
+          local-dir: ./                           # or dist/ if you build
+          exclude: |
             **/.git*
             **/.github/**
             **/node_modules/**
-            **/src/**
             **/*.md
           state-name: .ftp-deploy-sync-state.json
           dangerous-clean-slate: false
+          timeout: 600000
+          log-level: verbose
