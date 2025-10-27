@@ -12,3 +12,40 @@
 .email-text p{
   font-size: 0.8rem !important;
 }
+
+
+.pricing-style-4 .price-image img{
+  margin-top: 30px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px), (max-width: 767px) {
+  .pricing-style-4 .price-image img {
+    width: 100%;
+  }
+}
+
+.contact .contact-image img{
+  margin-top: 30px;
+  width: 150%;
+  margin-bottom: 30px;
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px), (max-width: 767px) {
+  .contact .contact-image img {
+    width: 100%;
+  }
+}
+
+.task .task-image img{
+  width: 80%;
+  margin-bottom: 50px;
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px), (max-width: 767px) {
+  .task .task-image img {
+    width: 100%;
+  }
+}
