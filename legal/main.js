@@ -1,6 +1,5 @@
 
 (function() {
-  console.log("started")
     /* ====================
     Preloader
     ======================= */
