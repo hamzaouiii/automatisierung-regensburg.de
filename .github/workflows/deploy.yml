@@ -2,7 +2,7 @@ name: Deploy to Hetzner (Explicit FTPS)
 
 on:
   push:
-    branches: [ production ]
+    branches: [ main ]
   workflow_dispatch: {}
 
 jobs:
