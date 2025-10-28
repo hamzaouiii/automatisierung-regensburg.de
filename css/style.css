@@ -49,3 +49,50 @@
     width: 100%;
   }
 }
+
+
+
+.privacy-content{
+  background-color: #f3f3f3;
+  min-height: 100vh;
+  height: 100%;
+  padding-top: 200px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+
+.privacy-content .figure img{
+max-width: 600px;
+
+}
+.privacy-content h1{
+  font-size: 2rem;
+}
+
+.privacy-content h2{
+  font-size: 1.5rem;
+}
+.privacy-content h3{
+  font-size: 1rem;
+}
+.privacy-content-par{
+  margin: 35px 0;
+}
+.privacy-content-par p{
+  padding-left: 5px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px), (max-width: 767px) {
+  .privacy-content{
+    flex-direction: column;
+  }
+  .privacy-content .figure img{
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+}
